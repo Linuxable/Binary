@@ -1,0 +1,289 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  z-index: 1;
+  font-family: Ebrima;
+  outline: none;
+}
+/*Deel 1*/
+.deel1{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+}
+/*Titel animatie*/
+p{
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 80%;
+  font-family: Arial;
+  font-weight:300;
+  font-size:110px;
+  letter-spacing: .5em;
+  text-align: center;
+}
+/*tweede deel*/
+#deel2{
+  position: absolute;
+  top: 100%;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+/*Omzetter*/
+.converter{
+  position: absolute;
+  left: 0%;
+  background-color: black;
+  width: 100%;
+  height: 50%;
+  border-bottom: 4px solid black;
+  color: #00b300;
+  background-image: -webkit-gradient(linear, 0% 90%, 0% 100%, from(rgba(0, 255, 0, 0)), to(rgba(0, 255, 0, 0.1)));
+}
+.calc{
+  width: 100%;
+}
+.outtext, .intext{
+  position: absolute;
+  top: 10%;
+  width: 30%;
+  height: 80%;
+}
+.intext{
+  left: 5%;
+}
+.outtext{
+  right: 5%;
+}
+#cnvtekst{
+  position: absolute;
+  left: 42.5%;
+  top: 5%;
+  width: 15%;
+  text-align: center;
+  letter-spacing: .5em;
+}
+.delimiter{
+  position: absolute;
+  left: 42.5%;
+  top: 47.5%;
+  width: 15%;
+  text-align: center;
+  letter-spacing: .5em;
+}
+.btn1, .btn2{
+  position: absolute;
+  width: 20%;
+  letter-spacing: .5em;
+  border: 2px solid #00b300;
+  background-color: transparent;
+  color: #00b300;
+  height: 10%;
+}
+.btn1{
+  bottom: 25%;
+  left: 40%;
+}
+.btn1:hover{
+  background-color: #00b300;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+}
+.btn2{
+  bottom: 10%;
+  left: 40%;
+}
+.btn2:hover{
+  background-color: #00b300;
+  color: black;
+  cursor: pointer;
+  font-weight: bold;
+}
+select{
+  background-color: black;
+  color: #00b300;
+}
+select:hover{
+  cursor: pointer;
+}
+/*Parallax
+In de map Binaire Getallen zit geen css map, omdat ik anders niet zonder problemen vanuit de css map naar de afbeeldingen map kon verwijzen.
+*/
+.parallax1, .parallax2 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    color: white;
+}
+.parallax1{
+  background-image: url("afb/afb1.jpg");
+  height: 20%;
+}
+.parallax1 h2{
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  height: 10%;
+  width: 80%;
+  padding: 14px 25px;
+  letter-spacing: .5em;
+  text-align: center;
+}
+.parallax2{
+  background-image: url("afb/afb1.jpg");
+  position: absolute;
+  top: 70%;
+  height: 55%;
+  width: 100%;
+}
+/*De tabel*/
+.table2 {
+    border-collapse: collapse;
+    width: 100%;
+    top: 3%;
+    position: absolute;
+    letter-spacing: .5em;
+}
+
+.th2, .td2 {
+    text-align: left;
+    padding: 8px;
+}
+
+.tr2:nth-child(even){
+  background-color: black;
+  opacity: .8;
+}
+
+.th2 {
+    background-color: #009900;
+    color: white;
+    font-weight: bold;
+}
+/*Crdits*/
+.credits{
+  width: 100%;
+  height: 30%;
+  background-color: black;
+  position: absolute;
+  top: 125%;
+  background-image: -webkit-gradient(linear, 0% 90%, 0% 100%, from(rgba(0, 255, 0, 0)), to(rgba(0, 255, 0, 0.1)));
+}
+.credits h2{
+  color: #00b300;
+  letter-spacing: .5em;
+  text-align: center;
+  margin-top: 5%;
+}
+.credits h4{
+  color: #00b300;
+  letter-spacing: .5em;
+  text-align: center;
+}
+/*De achtergrond*/
+#matrix{
+  z-index: 0;
+  position:absolute;
+  top: 0px;
+  left: 0px;
+	font-family: Katakana;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: #000;
+	background-image: -webkit-gradient(linear, 0% 90%, 0% 100%, from(rgba(0, 255, 0, 0)), to(rgba(0, 255, 0, 0.1)));
+	color: rgba(0, 255, 0, .7);
+	text-shadow: rgba(255, 255, 255, .8) 0px 0px 4px;
+}
+@-webkit-keyframes fade{
+    0%   { opacity: 1; }
+    100% { opacity: 0; }
+}
+@-webkit-keyframes fall{
+	from {top: -250px;}
+	to 	{top: 300px;}
+}
+
+
+#matrix div{
+	/* writing-mode: tb-rl; - ughh. doesn't work */
+	position: absolute;
+	top: 0;
+	/* arrearance */
+	-webkit-transform-origin: 0%;
+  -webkit-transform: rotate(90deg);
+	/* animation */
+	-webkit-animation-name: fall, fade;
+	-webkit-animation-iteration-count: infinite; /* use 0 to infinite */
+	-webkit-animation-direction: normal; /* default is normal. use 'alternate' to reverse direction */
+	-webkit-animation-timing-function: ease-out;
+}
+#matrix span{
+	color: rgb(0, 255, 0);
+	text-shadow: rgb(255, 255, 255) 0px 0px 5px;
+}
+.f1{
+	font-size: 1.2em;
+}
+.f2{
+	font-size: .9em;
+}
+.c1{
+	color: rgba(0, 255, 0, .5);
+}
+.d1{
+	-webkit-animation-duration: 4s;
+}
+.d2{
+	-webkit-animation-duration: 6s;
+}
+.d3{
+	-webkit-animation-duration: 8s;
+}
+.d4{
+	-webkit-animation-duration: 10s;
+}
+.de{
+	-webkit-animation-delay: 3s;
+}
+/*Het pijltje*/
+.aanwijs_pijl{
+  width: 10%;
+  height: 5%;
+}
+.pijl {
+  position: absolute;
+  bottom: 0px;
+  left: 48.15%;
+  z-index: 3;
+  outline: none;
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+/* Wat de scrollbar betreft:*/
+::-webkit-scrollbar {
+    width: 0px !important;
+}
